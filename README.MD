@@ -1,6 +1,6 @@
 # [Comprehensive Data Structure and Algorithm Study Guide](https://leetcode.com/discuss/general-discussion/494279/Comprehensive-Data-Structure-and-Algorithm-Study-Guide)
 
-- CI = Coding Interview, CP = Competitive Programming, DSA = Data Structure and Algorithm, LC = LeetCode, CLRS = Cormen, Leiserson, Rivest, and Stein, BFS/DFS= Breadth/Depth First Search, DP = Dynamic Programming.
+-   CI = Coding Interview, CP = Competitive Programming, DSA = Data Structure and Algorithm, LC = LeetCode, CLRS = Cormen, Leiserson, Rivest, and Stein, BFS/DFS= Breadth/Depth First Search, DP = Dynamic Programming.
 
 ![PLAN](https://raw.githubusercontent.com/aminPial/Competitive-Programming-Library/master/Cpp/final.png)
 
