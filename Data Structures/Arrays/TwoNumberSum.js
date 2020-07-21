@@ -21,15 +21,15 @@
 // Solution 1: O(n^2) time | O(1) space
 function twoNumberSum(array, targetSum) {
   for(let i = 0; i < array.length - 1; i++) {
-    let curr = array[i]
+    let curr = array[i];
     for(let j = i + 1; j<array.length; j++) {
-      let next = array[j]
+      let next = array[j];
       if (curr + next === targetSum) {
-        return [curr, next]
+        return [curr, next];
       }
     }
   }
-  return []
+  return [];
 }
 
 // Solution 2: O(n) time | O(n) space
@@ -66,3 +66,4 @@ function twoNumberSum(array, targetSum) {
   }
   return [];
 }
+
