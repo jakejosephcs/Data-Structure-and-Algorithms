@@ -49,3 +49,30 @@ function findClosestValueInBst(tree, target) {
 	return winningNode.value
 }
 
+// Average: O(log(n)) time | O(n) space
+// Worst: O(n) time | O(n) space
+function findClosestValueInBst(tree, target) {
+	return findClosestValueInBstHelper(tree, target, tree)
+}
+
+function findClosestValueInBstHelper(tree, target, winner) {
+	if (tree === null) return winner.value
+	let currNode = tree
+	let winningNode = winner
+	let currDifference = Math.abs(target - currNode.value)
+	let winningDifference = Math.abs(target - winningNode.value)
+
+	if (currDifference < winningDifference) {
+		winningNode = currNode
+	}
+
+	if (currNode.value < target) {
+		return findClosestValueInBstHelper(currNode.right, target, winningNode)
+	} else if (currNode.value > target) {
+		return findClosestValueInBstHelper(currNode.left, target, winningNode)
+	} else {
+		return winningNode.value
+	}
+}
+
+
