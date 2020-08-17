@@ -1,20 +1,17 @@
 // // O(n^2) time | O(1) space
-
-const numArray = [2, 8, 5, 3, 9, 4, 1]
-
 function bubbleSort(array) {
-  for (let i=0; i < array.length - 1; i++) {
-    for (let j=0; j < array.length - 1 - i; j++) {
-      if (array[j] > array[j+1]) {
-        const temp = array[j];
-        array[j] = array[j+1];
-        array[j+1] = temp;
+  let isSorted = false;
+  let counter = 0;
+  while (!isSorted) {
+    isSorted = true;
+    for (let i = 0; i < array.length - 1 - counter; i++) {
+      if (array[i] > array[i + 1]) {
+        [array[i], array[i + 1]] = [array[i + 1], array[i]];
+        isSorted = false;
       }
     }
+    counter++;
   }
   return array;
 }
-
-bubbleSort(numArray)
-
 
