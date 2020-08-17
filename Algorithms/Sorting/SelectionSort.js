@@ -1,22 +1,20 @@
 // O(n^2) time | O(1) space
-
-const numArray = [2, 8, 5, 3, 9, 4, 1]
-
 function selectionSort(array) {
-  for (let i=0; i<array.length-1; i++) {
-    let iMin = i;
-    for (let j=i+1; j<array.length; j++) {
-      if (array[j] < array[iMin]) {
-        iMin = j;
+  let currentIndex = 0;
+  while (currentIndex < array.length - 1) {
+    let smallestIndex = currentIndex;
+    for (let i = currentIndex + 1; i < array.length; i++) {
+      if (array[smallestIndex] > array[i]) {
+        smallestIndex = i;
       }
     }
-    let temp = array[i];
-    array[i] = array[iMin];
-    array[iMin] = temp;
+    [array[currentIndex], array[smallestIndex]] = [
+      array[smallestIndex],
+      array[currentIndex],
+    ];
+    currentIndex++;
   }
   return array;
 }
-
-selectionSort(numArray)
 
 
