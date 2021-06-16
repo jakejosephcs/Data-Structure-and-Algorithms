@@ -17,3 +17,20 @@ def firstNonRepeatingCharacter(string):
         if foundRepeating == False:
             return i
     return -1
+
+# Optimal solution:
+# Time: O(n) where n is the length of the input string
+# Space: O(1) since we are ONLY dealing with lower case letters
+#   (finite size dictonay)
+def firstNonRepeatingCharacter(string):
+    letterFreq = dict()
+    for letter in string:
+        if letterFreq.get(letter) == None:
+            letterFreq[letter] = 1
+        else:
+            letterFreq[letter] += 1
+    for i in range(len(string)):
+        currentLetter = string[i]
+        if letterFreq[currentLetter] == 1:
+            return i
+    return -1
