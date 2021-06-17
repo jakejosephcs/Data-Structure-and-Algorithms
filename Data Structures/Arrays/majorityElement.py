@@ -11,7 +11,7 @@ def majorityElement(nums):
         else:
             numFreq[num] += 1
     majorityElement = None
-    majorityElementFreq = 0
+    majorityElementFreq = len(nums)/2
     for k, v in numFreq.items():
         if v > majorityElementFreq:
             majorityElement = k
